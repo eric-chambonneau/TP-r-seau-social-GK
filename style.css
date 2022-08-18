@@ -1,3 +1,7 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 body {
     background: #f1f1f1;
     font-family: 'roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -37,6 +41,39 @@ color: inherit;
 .topbar-nav a:hover,
 .topbar-nav a.active {
     color: blue;
+}
+/************Conteneur**************************/
+
+.container {
+    padding: 0 15px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    font-size: 12px;
+}
+
+.sidebar a{
+    display: block;
+    text-decoration: none;
+    padding: .6em;
+}
+
+.sidebar a::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(/media/.svg) center center / contain;
+}
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar a.active,
+.sidebar a.active {
+    color: #000;
 }
 /***********Media queries********************/
 @media only screen and (min-width: 520px) {
